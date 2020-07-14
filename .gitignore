@@ -1,0 +1,8 @@
+bin/
+dist/
+.vscode/
+
+.DS_Store
+
+*credentials.json
+*token.json

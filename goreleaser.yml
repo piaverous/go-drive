@@ -1,0 +1,19 @@
+# goreleaser.yml
+archives:
+- 
+  format: binary
+  replacements:
+    amd64: 64-bit
+    386: 32-bit
+    darwin: macOS
+    linux: linux
+
+release:
+  # Repo in which the release will be created.
+  # Default is extracted from the origin remote URL or empty if its private hosted.
+  # Note: it can only be one: either github or gitlab or gitea
+  github:
+    owner: piaverous
+    name: go-drive
+
+  name_template: "{{.ProjectName}}-v{{.Version}}"

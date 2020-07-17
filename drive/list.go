@@ -10,7 +10,7 @@ func ListFiles(service *drive.Service) *drive.FileList {
 	result, err := service.Files.
 		List().
 		PageSize(10).
-		Fields("nextPageToken, files(id, name)").
+		Fields("nextPageToken, files(id, name, mimeType)").
 		Do()
 
 	if err != nil {
